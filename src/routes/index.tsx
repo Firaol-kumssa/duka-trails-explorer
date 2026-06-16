@@ -549,7 +549,9 @@ function LandingPage() {
                 <Instagram size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@dukahiking"
+                target="_blank"
+                rel="noreferrer"
                 aria-label="TikTok"
                 className="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-xs font-bold transition-colors hover:bg-forest hover:border-forest"
               >
