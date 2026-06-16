@@ -577,12 +577,21 @@ function LandingPage() {
             <div className="eyebrow text-gold">Get in touch</div>
             <ul className="mt-5 space-y-3 text-sm">
               <li className="flex items-center gap-2 text-white/70">
+                <Phone size={14} /> 0964 252 025
+              </li>
+              <li className="flex items-center gap-2 text-white/70">
                 <Mail size={14} /> hello@dukahiking.com
               </li>
               <li className="flex items-center gap-2 text-white/70">
-                <Instagram size={14} /> @duka_hiking
+                <Instagram size={14} />
+                <a href="https://www.instagram.com/duka_hiking/" target="_blank" rel="noreferrer" className="hover:text-white">@duka_hiking</a>
               </li>
-              <li className="text-white/70">TikTok: @dukahiking</li>
+              <li className="text-white/70">
+                TikTok: <a href="https://www.tiktok.com/@dukahiking" target="_blank" rel="noreferrer" className="hover:text-white">@dukahiking</a>
+              </li>
+              <li className="text-white/70">
+                Telegram / WhatsApp: <a href="https://wa.me/251964252025" target="_blank" rel="noreferrer" className="hover:text-white">+251 964 252 025</a>
+              </li>
               <li className="text-white/70">Hawassa, Ethiopia</li>
             </ul>
           </div>
