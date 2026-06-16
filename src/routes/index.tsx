@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Duka Travel & Tours — authentic Ethiopian hiking journeys across Hawassa, Dorze, Arba Minch, Wolaita, Langano and Abijatta. Established 2020 in Jimma.",
+          "Duka Travel & Tours — authentic Ethiopian hiking journeys across Hawassa, Dorze, Arba Minch, Wolaita, Langano and Abijatta. Established 2020 in Hawassa.",
       },
       { property: "og:title", content: "Duka Hiking — Explore, Discover, Experience Ethiopia" },
       { property: "og:description", content: "Hike the hidden highlands of Ethiopia with local guides. Let's put our traces." },
@@ -88,7 +88,7 @@ function LandingPage() {
         <div className="relative mx-auto flex min-h-[100svh] max-w-7xl items-center px-6 lg:px-10">
           <div className="max-w-2xl pt-28 pb-24 text-white">
             <div className="eyebrow text-gold animate-fade-up" style={{ animationDelay: "120ms" }}>
-              Est. 2020 · Jimma, Ethiopia
+              Est. 2020 · Hawassa, Ethiopia
             </div>
             <h1
               className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] text-balance animate-fade-up"
@@ -547,7 +547,7 @@ function LandingPage() {
                 <Instagram size={14} /> @duka_hiking
               </li>
               <li className="text-white/70">TikTok: @dukahiking</li>
-              <li className="text-white/70">Jimma, Ethiopia</li>
+              <li className="text-white/70">Hawassa, Ethiopia</li>
             </ul>
           </div>
         </div>
