@@ -12,6 +12,7 @@ import {
   Mail,
   MessageCircle,
   Send,
+  Phone,
   Star,
   Quote,
 } from "lucide-react";
@@ -19,17 +20,21 @@ import {
 import { Navbar } from "@/components/landing/Navbar";
 import { Reveal, CountUp } from "@/components/landing/Reveal";
 
-import hero from "@/assets/hero.jpg";
+import heroAsset from "@/assets/hero-duka.jpg.asset.json";
+import about1Asset from "@/assets/about-duka1.jpg.asset.json";
+import about2Asset from "@/assets/about-duka2.jpg.asset.json";
 import hawassa from "@/assets/hawassa.jpg";
 import dorze from "@/assets/dorze.jpg";
 import arbaminch from "@/assets/arbaminch.jpg";
 import wolaita from "@/assets/wolaita.jpg";
 import langano from "@/assets/langano.jpg";
 import abijatta from "@/assets/abijatta.jpg";
-import about1 from "@/assets/about1.jpg";
-import about2 from "@/assets/about2.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import logo from "@/assets/logo.png";
+
+const hero = heroAsset.url;
+const about1 = about1Asset.url;
+const about2 = about2Asset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,7 +43,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Duka Travel & Tours — authentic Ethiopian hiking journeys across Hawassa, Dorze, Arba Minch, Wolaita, Langano and Abijatta. Established 2020 in Jimma.",
+          "Duka Travel & Tours — authentic Ethiopian hiking journeys across Hawassa, Dorze, Arba Minch, Wolaita, Langano and Abijatta. Established 2020 in Hawassa.",
       },
       { property: "og:title", content: "Duka Hiking — Explore, Discover, Experience Ethiopia" },
       { property: "og:description", content: "Hike the hidden highlands of Ethiopia with local guides. Let's put our traces." },
@@ -84,7 +89,7 @@ function LandingPage() {
         <div className="relative mx-auto flex min-h-[100svh] max-w-7xl items-center px-6 lg:px-10">
           <div className="max-w-2xl pt-28 pb-24 text-white">
             <div className="eyebrow text-gold animate-fade-up" style={{ animationDelay: "120ms" }}>
-              Est. 2020 · Jimma, Ethiopia
+              Est. 2020 · Hawassa, Ethiopia
             </div>
             <h1
               className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] text-balance animate-fade-up"
@@ -473,15 +478,48 @@ function LandingPage() {
                   <Send size={16} /> Send Message
                 </button>
                 <a
-                  href="https://wa.me/251000000000"
+                  href="https://wa.me/251964252025"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-forest px-6 py-3.5 text-sm font-semibold text-forest-foreground transition-transform hover:scale-[1.02]"
                 >
-                  <MessageCircle size={16} /> Chat on WhatsApp
+                  <MessageCircle size={16} /> WhatsApp
                 </a>
               </div>
             </form>
+
+            <div className="mx-auto mt-8 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="tel:+251964252025"
+                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/20 backdrop-blur-md transition-colors hover:bg-white/20"
+              >
+                <Phone size={15} /> 0964 252 025
+              </a>
+              <a
+                href="https://wa.me/251964252025"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.04]"
+              >
+                <MessageCircle size={15} /> WhatsApp
+              </a>
+              <a
+                href="https://t.me/+251964252025"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#229ED9] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.04]"
+              >
+                <Send size={15} /> Telegram
+              </a>
+              <a
+                href="https://www.tiktok.com/@dukahiking"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white shadow-sm ring-1 ring-white/20 transition-transform hover:scale-[1.04]"
+              >
+                <span className="font-bold">TikTok</span> @dukahiking
+              </a>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -511,7 +549,9 @@ function LandingPage() {
                 <Instagram size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@dukahiking"
+                target="_blank"
+                rel="noreferrer"
                 aria-label="TikTok"
                 className="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-xs font-bold transition-colors hover:bg-forest hover:border-forest"
               >
@@ -537,13 +577,22 @@ function LandingPage() {
             <div className="eyebrow text-gold">Get in touch</div>
             <ul className="mt-5 space-y-3 text-sm">
               <li className="flex items-center gap-2 text-white/70">
+                <Phone size={14} /> 0964 252 025
+              </li>
+              <li className="flex items-center gap-2 text-white/70">
                 <Mail size={14} /> hello@dukahiking.com
               </li>
               <li className="flex items-center gap-2 text-white/70">
-                <Instagram size={14} /> @duka_hiking
+                <Instagram size={14} />
+                <a href="https://www.instagram.com/duka_hiking/" target="_blank" rel="noreferrer" className="hover:text-white">@duka_hiking</a>
               </li>
-              <li className="text-white/70">TikTok: @dukahiking</li>
-              <li className="text-white/70">Jimma, Ethiopia</li>
+              <li className="text-white/70">
+                TikTok: <a href="https://www.tiktok.com/@dukahiking" target="_blank" rel="noreferrer" className="hover:text-white">@dukahiking</a>
+              </li>
+              <li className="text-white/70">
+                Telegram / WhatsApp: <a href="https://wa.me/251964252025" target="_blank" rel="noreferrer" className="hover:text-white">+251 964 252 025</a>
+              </li>
+              <li className="text-white/70">Hawassa, Ethiopia</li>
             </ul>
           </div>
         </div>
