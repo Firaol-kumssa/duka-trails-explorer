@@ -12,6 +12,7 @@ import {
   Mail,
   MessageCircle,
   Send,
+  Phone,
   Star,
   Quote,
 } from "lucide-react";
@@ -477,15 +478,48 @@ function LandingPage() {
                   <Send size={16} /> Send Message
                 </button>
                 <a
-                  href="https://wa.me/251000000000"
+                  href="https://wa.me/251964252025"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-forest px-6 py-3.5 text-sm font-semibold text-forest-foreground transition-transform hover:scale-[1.02]"
                 >
-                  <MessageCircle size={16} /> Chat on WhatsApp
+                  <MessageCircle size={16} /> WhatsApp
                 </a>
               </div>
             </form>
+
+            <div className="mx-auto mt-8 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="tel:+251964252025"
+                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/20 backdrop-blur-md transition-colors hover:bg-white/20"
+              >
+                <Phone size={15} /> 0964 252 025
+              </a>
+              <a
+                href="https://wa.me/251964252025"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.04]"
+              >
+                <MessageCircle size={15} /> WhatsApp
+              </a>
+              <a
+                href="https://t.me/+251964252025"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[#229ED9] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.04]"
+              >
+                <Send size={15} /> Telegram
+              </a>
+              <a
+                href="https://www.tiktok.com/@dukahiking"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white shadow-sm ring-1 ring-white/20 transition-transform hover:scale-[1.04]"
+              >
+                <span className="font-bold">TikTok</span> @dukahiking
+              </a>
+            </div>
           </Reveal>
         </div>
       </section>
