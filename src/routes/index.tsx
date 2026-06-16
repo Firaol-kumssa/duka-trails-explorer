@@ -19,17 +19,21 @@ import {
 import { Navbar } from "@/components/landing/Navbar";
 import { Reveal, CountUp } from "@/components/landing/Reveal";
 
-import hero from "@/assets/hero.jpg";
+import heroAsset from "@/assets/hero-duka.jpg.asset.json";
+import about1Asset from "@/assets/about-duka1.jpg.asset.json";
+import about2Asset from "@/assets/about-duka2.jpg.asset.json";
 import hawassa from "@/assets/hawassa.jpg";
 import dorze from "@/assets/dorze.jpg";
 import arbaminch from "@/assets/arbaminch.jpg";
 import wolaita from "@/assets/wolaita.jpg";
 import langano from "@/assets/langano.jpg";
 import abijatta from "@/assets/abijatta.jpg";
-import about1 from "@/assets/about1.jpg";
-import about2 from "@/assets/about2.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import logo from "@/assets/logo.png";
+
+const hero = heroAsset.url;
+const about1 = about1Asset.url;
+const about2 = about2Asset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
