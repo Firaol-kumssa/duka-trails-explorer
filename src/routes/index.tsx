@@ -20,21 +20,41 @@ import {
 import { Navbar } from "@/components/landing/Navbar";
 import { Reveal, CountUp } from "@/components/landing/Reveal";
 
-import heroAsset from "@/assets/hero-duka.jpg.asset.json";
-import about1Asset from "@/assets/about-duka1.jpg.asset.json";
-import about2Asset from "@/assets/about-duka2.jpg.asset.json";
-import hawassa from "@/assets/hawassa.jpg";
-import dorze from "@/assets/dorze.jpg";
-import arbaminch from "@/assets/arbaminch.jpg";
-import wolaita from "@/assets/wolaita.jpg";
-import langano from "@/assets/langano.jpg";
-import abijatta from "@/assets/abijatta.jpg";
-import contactBg from "@/assets/contact-bg.jpg";
+import heroAsset from "@/assets/hero.png.asset.json";
+import backgroundAsset from "@/assets/background.png.asset.json";
+import story1Asset from "@/assets/story1.png.asset.json";
+import story2Asset from "@/assets/story2.png.asset.json";
+import baleAsset from "@/assets/balemountain.png.asset.json";
+import dorzeAsset from "@/assets/dorze.png.asset.json";
+import abijataAsset from "@/assets/abijata.png.asset.json";
+import langanoAsset from "@/assets/langano.png.asset.json";
+import wenchiAsset from "@/assets/wenchi.png.asset.json";
+import afarAsset from "@/assets/afar.png.asset.json";
+import pic1 from "@/assets/pic1.png.asset.json";
+import pic2 from "@/assets/pic2.png.asset.json";
+import pic3 from "@/assets/pic3.png.asset.json";
+import pic4 from "@/assets/pic4.png.asset.json";
+import pic5 from "@/assets/pic5.png.asset.json";
+import pic6 from "@/assets/pic6.png.asset.json";
+import pic7 from "@/assets/pic7.png.asset.json";
+import pic8 from "@/assets/pic8.png.asset.json";
+import pic9 from "@/assets/pic9.png.asset.json";
+import pic10 from "@/assets/pic10.png.asset.json";
+import pic11 from "@/assets/pic11.png.asset.json";
+import pic12 from "@/assets/pic12.png.asset.json";
 import logo from "@/assets/logo.png";
 
 const hero = heroAsset.url;
-const about1 = about1Asset.url;
-const about2 = about2Asset.url;
+const background = backgroundAsset.url;
+const story1 = story1Asset.url;
+const story2 = story2Asset.url;
+
+const PHONE_DISPLAY = "+251 964 252 025";
+const PHONE_TEL = "+251964252025";
+const WHATSAPP_URL = "https://wa.me/251964252025";
+const TELEGRAM_URL = "https://t.me/+251964252025";
+const TIKTOK_URL = "https://www.tiktok.com/@dukahiking";
+const INSTAGRAM_URL = "https://www.instagram.com/duka_hiking/";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,7 +63,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Duka Travel & Tours — authentic Ethiopian hiking journeys across Hawassa, Dorze, Arba Minch, Wolaita, Langano and Abijatta. Established 2020 in Hawassa.",
+          "Duka Travel & Tours — authentic Ethiopian hiking journeys across Bale Mountains, Dorze, Abijata-Shalla, Langano, Wenchi and Danakil. Established 2020 in Hawassa.",
       },
       { property: "og:title", content: "Duka Hiking — Explore, Discover, Experience Ethiopia" },
       { property: "og:description", content: "Hike the hidden highlands of Ethiopia with local guides. Let's put our traces." },
@@ -55,15 +75,17 @@ export const Route = createFileRoute("/")({
 });
 
 const destinations = [
-  { name: "Hawassa", img: hawassa, blurb: "Lake views, fish markets & Sidama culture", duration: "2–3 Days" },
-  { name: "Dorze Village", img: dorze, blurb: "Traditional bamboo homes & handwoven textiles", duration: "2 Days" },
-  { name: "Arba Minch", img: arbaminch, blurb: "Crocodile market, Nechisar Park & Nile views", duration: "3–4 Days" },
-  { name: "Wolaita Sodo", img: wolaita, blurb: "Ancient kingdom history & scenic highlands", duration: "2 Days" },
-  { name: "Langano Lake", img: langano, blurb: "Relaxing lakeside retreat & birdwatching", duration: "2 Days" },
-  { name: "Abijatta-Shalla", img: abijatta, blurb: "Flamingo lakes & volcanic national park", duration: "1–2 Days" },
+  { name: "Bale Mountains", img: baleAsset.url, blurb: "Highest point: Mount Tullu Dimtu. Mountain ranges in the Oromia Region of southeast Ethiopia.", duration: "3–4 Days" },
+  { name: "Dorze Village", img: dorzeAsset.url, blurb: "Nestled in the Guge Mountains high above Lake Chamo, the Dorze Village is a must-visit destination in southern Ethiopia.", duration: "2 Days" },
+  { name: "Abijata Shalla National Park", img: abijataAsset.url, blurb: "Explore the breathtaking attractions, abundant birdlife, and unique geographic features.", duration: "1–2 Days" },
+  { name: "Lake Langano", img: langanoAsset.url, blurb: "A popular resort destination in the Great Rift Valley of Ethiopia, located exactly 200 kilometers south of Addis Ababa.", duration: "2 Days" },
+  { name: "Wenchi Crater Lake", img: wenchiAsset.url, blurb: "A stunning volcanic caldera in Ethiopia's Oromia Region, located about 150 km west of Addis Ababa.", duration: "2 Days" },
+  { name: "Danakil Depression (Afar)", img: afarAsset.url, blurb: "One of the lowest, hottest, and most alien landscapes on Earth.", duration: "4–5 Days" },
 ];
 
-const strip = ["Hawassa", "Dorze", "Arba Minch", "Wolaita", "Debre Zeit", "Langano", "Abijatta"];
+const strip = ["Bale Mountains", "Dorze", "Abijata-Shalla", "Langano", "Wenchi", "Danakil"];
+
+const galleryPics = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12].map((a) => a.url);
 
 function LandingPage() {
   return (
@@ -154,6 +176,80 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* TRAIL — animated hiking trail band */}
+      <section aria-hidden className="relative overflow-hidden bg-parchment py-14 lg:py-20">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10">
+          <div className="mb-6 flex items-center justify-center gap-3 text-forest">
+            <Footprints size={18} className="text-earth" />
+            <span className="eyebrow text-forest">Follow the trail</span>
+            <Footprints size={18} className="text-earth scale-x-[-1]" />
+          </div>
+          <div className="relative h-24">
+            <svg
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+              className="absolute inset-0 h-full w-full"
+            >
+              <path
+                d="M 0 80 Q 150 10 300 60 T 600 60 T 900 60 T 1200 40"
+                fill="none"
+                stroke="var(--earth)"
+                strokeWidth="2.5"
+                strokeDasharray="8 10"
+                strokeLinecap="round"
+                className="trail-path"
+              />
+            </svg>
+            {/* Walking hiker along trail */}
+            <div className="pointer-events-none absolute top-1/2 -translate-y-1/2 hiker-walk">
+              <div className="grid h-10 w-10 place-items-center rounded-full bg-forest shadow-elegant ring-4 ring-parchment">
+                <Mountain size={18} className="text-gold" />
+              </div>
+            </div>
+            {/* Static footprint markers */}
+            {[15, 35, 55, 75].map((left, i) => (
+              <Footprints
+                key={left}
+                size={14}
+                className="absolute text-earth/50 footprint-fade"
+                style={{
+                  left: `${left}%`,
+                  top: `${i % 2 === 0 ? "20%" : "62%"}`,
+                  animationDelay: `${i * 400}ms`,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+        <style>{`
+          @keyframes trailDraw {
+            from { stroke-dashoffset: 1400; }
+            to   { stroke-dashoffset: 0; }
+          }
+          .trail-path {
+            stroke-dasharray: 8 10;
+            animation: trailDraw 12s linear infinite;
+          }
+          @keyframes hikerWalk {
+            0%   { left: -2%; transform: translateY(-50%) translateY(20px); }
+            25%  { transform: translateY(-50%) translateY(-6px); }
+            50%  { transform: translateY(-50%) translateY(-14px); }
+            75%  { transform: translateY(-50%) translateY(-8px); }
+            100% { left: 100%; transform: translateY(-50%) translateY(-20px); }
+          }
+          .hiker-walk {
+            animation: hikerWalk 12s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          }
+          @keyframes footprintPulse {
+            0%, 100% { opacity: 0.25; transform: scale(1); }
+            50%      { opacity: 0.9;  transform: scale(1.15); }
+          }
+          .footprint-fade {
+            animation: footprintPulse 3.5s ease-in-out infinite;
+          }
+        `}</style>
+      </section>
+
       {/* ABOUT */}
       <section id="about" className="relative bg-parchment py-24 lg:py-32">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
@@ -187,16 +283,16 @@ function LandingPage() {
           <Reveal delay={150} className="relative">
             <div className="relative h-[520px] w-full">
               <img
-                src={about2}
-                alt="Misty Ethiopian highland trail"
+                src={story2}
+                alt="Duka Hiking team on an Ethiopian trail"
                 loading="lazy"
                 width={1024}
                 height={1280}
                 className="absolute right-0 top-0 h-[78%] w-[72%] rounded-3xl object-cover shadow-elegant"
               />
               <img
-                src={about1}
-                alt="Hikers on an Ethiopian mountain trail"
+                src={story1}
+                alt="Hikers exploring Ethiopian highlands"
                 loading="lazy"
                 width={1024}
                 height={1280}
@@ -245,7 +341,7 @@ function LandingPage() {
                     <div className="inline-flex items-center gap-1.5 text-sm font-medium text-gold">
                       <MapPin size={14} /> {d.name}
                     </div>
-                    <h3 className="mt-2 text-2xl font-bold leading-tight">{d.blurb}</h3>
+                    <h3 className="mt-2 text-xl font-bold leading-snug">{d.blurb}</h3>
                     <a
                       href="#contact"
                       className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-gold opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 translate-y-1"
@@ -330,7 +426,7 @@ function LandingPage() {
           <div className="mt-14 grid gap-7 md:grid-cols-3">
             {[
               { q: "Duka Hiking gave us the most authentic Ethiopian experience we could have hoped for. The guides knew every trail and story.", n: "Sarah M.", f: "🇩🇪" },
-              { q: "From Hawassa to Dorze, every stop was perfectly planned. We felt like locals, not tourists.", n: "James K.", f: "🇬🇧" },
+              { q: "From Bale Mountains to Dorze, every stop was perfectly planned. We felt like locals, not tourists.", n: "James K.", f: "🇬🇧" },
               { q: "The Langano lake trip was unforgettable. Highly recommend for anyone wanting real Ethiopia.", n: "Amina T.", f: "🇸🇦" },
             ].map((t, i) => (
               <Reveal key={t.n} delay={i * 120}>
@@ -356,39 +452,28 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* INSTAGRAM */}
+      {/* INSTAGRAM GALLERY */}
       <section className="bg-background py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal>
             <div className="text-center">
               <div className="eyebrow text-forest">Field journal</div>
               <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-foreground">Follow Our Journey</h2>
-              <p className="mt-3 text-muted-foreground">
-                <a
-                  href="https://www.instagram.com/duka_hiking/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium text-forest hover:text-forest-deep"
-                >
-                  @duka_hiking
-                </a>{" "}
-                on Instagram
-              </p>
             </div>
           </Reveal>
 
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
-            {[hero, hawassa, dorze, arbaminch, langano, abijatta].map((img, i) => (
-              <Reveal key={i} delay={i * 60}>
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {galleryPics.map((img, i) => (
+              <Reveal key={i} delay={i * 50}>
                 <a
-                  href="https://www.instagram.com/duka_hiking/"
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="group relative block aspect-square overflow-hidden rounded-2xl"
+                  className="group relative block aspect-square overflow-hidden rounded-2xl shadow-card-soft"
                 >
                   <img
                     src={img}
-                    alt="Duka Hiking Instagram post"
+                    alt={`Duka Hiking gallery ${i + 1}`}
                     loading="lazy"
                     width={800}
                     height={800}
@@ -405,12 +490,12 @@ function LandingPage() {
 
           <div className="mt-10 text-center">
             <a
-              href="https://www.instagram.com/duka_hiking/"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-colors hover:bg-earth"
             >
-              <Instagram size={16} /> Follow on Instagram
+              <Instagram size={16} /> Follow @duka_hiking
               <ArrowRight size={14} />
             </a>
           </div>
@@ -420,8 +505,8 @@ function LandingPage() {
       {/* CONTACT */}
       <section id="contact" className="relative overflow-hidden py-28">
         <img
-          src={contactBg}
-          alt="Ethiopian mountain at sunset"
+          src={background}
+          alt="Ethiopian mountain landscape"
           loading="lazy"
           width={1920}
           height={1080}
@@ -457,10 +542,9 @@ function LandingPage() {
                 />
               </div>
               <select
-                defaultValue=""
+                defaultValue="Bale Mountains"
                 className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white focus:border-gold focus:outline-none [&>option]:text-foreground"
               >
-                <option value="" disabled>Choose a destination…</option>
                 {destinations.map((d) => (
                   <option key={d.name} value={d.name}>{d.name}</option>
                 ))}
@@ -478,7 +562,7 @@ function LandingPage() {
                   <Send size={16} /> Send Message
                 </button>
                 <a
-                  href="https://wa.me/251964252025"
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-forest px-6 py-3.5 text-sm font-semibold text-forest-foreground transition-transform hover:scale-[1.02]"
@@ -490,13 +574,13 @@ function LandingPage() {
 
             <div className="mx-auto mt-8 flex flex-wrap items-center justify-center gap-3">
               <a
-                href="tel:+251964252025"
+                href={`tel:${PHONE_TEL}`}
                 className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/20 backdrop-blur-md transition-colors hover:bg-white/20"
               >
-                <Phone size={15} /> 0964 252 025
+                <Phone size={15} /> {PHONE_DISPLAY}
               </a>
               <a
-                href="https://wa.me/251964252025"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.04]"
@@ -504,15 +588,15 @@ function LandingPage() {
                 <MessageCircle size={15} /> WhatsApp
               </a>
               <a
-                href="https://t.me/+251964252025"
+                href={TELEGRAM_URL}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#229ED9] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.04]"
               >
                 <Send size={15} /> Telegram
               </a>
               <a
-                href="https://www.tiktok.com/@dukahiking"
+                href={TIKTOK_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white shadow-sm ring-1 ring-white/20 transition-transform hover:scale-[1.04]"
@@ -540,7 +624,7 @@ function LandingPage() {
             </p>
             <div className="mt-5 flex gap-3">
               <a
-                href="https://www.instagram.com/duka_hiking/"
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -549,13 +633,22 @@ function LandingPage() {
                 <Instagram size={16} />
               </a>
               <a
-                href="https://www.tiktok.com/@dukahiking"
+                href={TIKTOK_URL}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="TikTok"
                 className="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-xs font-bold transition-colors hover:bg-forest hover:border-forest"
               >
                 TT
+              </a>
+              <a
+                href={TELEGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+                className="grid h-10 w-10 place-items-center rounded-full border border-white/20 transition-colors hover:bg-forest hover:border-forest"
+              >
+                <Send size={16} />
               </a>
             </div>
           </div>
@@ -577,27 +670,30 @@ function LandingPage() {
             <div className="eyebrow text-gold">Get in touch</div>
             <ul className="mt-5 space-y-3 text-sm">
               <li className="flex items-center gap-2 text-white/70">
-                <Phone size={14} /> 0964 252 025
+                <Phone size={14} /> <a href={`tel:${PHONE_TEL}`} className="hover:text-white">{PHONE_DISPLAY}</a>
               </li>
               <li className="flex items-center gap-2 text-white/70">
                 <Mail size={14} /> hello@dukahiking.com
               </li>
               <li className="flex items-center gap-2 text-white/70">
                 <Instagram size={14} />
-                <a href="https://www.instagram.com/duka_hiking/" target="_blank" rel="noreferrer" className="hover:text-white">@duka_hiking</a>
+                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-white">@duka_hiking</a>
               </li>
               <li className="text-white/70">
-                TikTok: <a href="https://www.tiktok.com/@dukahiking" target="_blank" rel="noreferrer" className="hover:text-white">@dukahiking</a>
+                TikTok: <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="hover:text-white">@dukahiking</a>
               </li>
               <li className="text-white/70">
-                Telegram / WhatsApp: <a href="https://wa.me/251964252025" target="_blank" rel="noreferrer" className="hover:text-white">+251 964 252 025</a>
+                Telegram: <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">{PHONE_DISPLAY}</a>
+              </li>
+              <li className="text-white/70">
+                WhatsApp: <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-white">{PHONE_DISPLAY}</a>
               </li>
               <li className="text-white/70">Hawassa, Ethiopia</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-white/10 py-6 text-center text-xs text-white/50">
-          © 2025 Duka Travel &amp; Tours. All rights reserved. — Let&rsquo;s put our traces.
+          © 2026 Duka Travel &amp; Tours. All rights reserved. — Let&rsquo;s put our traces.
         </div>
       </footer>
     </div>
