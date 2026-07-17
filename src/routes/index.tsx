@@ -20,39 +20,34 @@ import {
 import { Navbar } from "@/components/landing/Navbar";
 import { Reveal, CountUp } from "@/components/landing/Reveal";
 
-import heroAsset from "@/assets/hero.png.asset.json";
-import backgroundAsset from "@/assets/background.png.asset.json";
-import story1Asset from "@/assets/story1.png.asset.json";
-import story2Asset from "@/assets/story2.png.asset.json";
-import baleAsset from "@/assets/balemountain.png.asset.json";
-import dorzeAsset from "@/assets/dorze.png.asset.json";
-import abijataAsset from "@/assets/abijata.png.asset.json";
-import langanoAsset from "@/assets/langano.png.asset.json";
-import wenchiAsset from "@/assets/wenchi.png.asset.json";
-import afarAsset from "@/assets/afar.png.asset.json";
-import pic1 from "@/assets/pic1.png.asset.json";
-import pic2 from "@/assets/pic2.png.asset.json";
-import pic3 from "@/assets/pic3.png.asset.json";
-import pic4 from "@/assets/pic4.png.asset.json";
-import pic5 from "@/assets/pic5.png.asset.json";
-import pic6 from "@/assets/pic6.png.asset.json";
-import pic7 from "@/assets/pic7.png.asset.json";
-import pic8 from "@/assets/pic8.png.asset.json";
-import pic9 from "@/assets/pic9.png.asset.json";
-import pic10 from "@/assets/pic10.png.asset.json";
-import pic11 from "@/assets/pic11.png.asset.json";
-import pic12 from "@/assets/pic12.png.asset.json";
+import hero from "@/assets/hero.webp";
+import background from "@/assets/background.webp";
+import story1 from "@/assets/story1.webp";
+import story2 from "@/assets/story2.webp";
+import baleImg from "@/assets/balemountain.webp";
+import dorzeImg from "@/assets/dorze.webp";
+import abijataImg from "@/assets/abijata.webp";
+import langanoImg from "@/assets/langano.webp";
+import wenchiImg from "@/assets/wenchi.webp";
+import afarImg from "@/assets/afar.webp";
+import pic1 from "@/assets/pic1.webp";
+import pic2 from "@/assets/pic2.webp";
+import pic3 from "@/assets/pic3.webp";
+import pic4 from "@/assets/pic4.webp";
+import pic5 from "@/assets/pic5.webp";
+import pic6 from "@/assets/pic6.webp";
+import pic7 from "@/assets/pic7.webp";
+import pic8 from "@/assets/pic8.webp";
+import pic9 from "@/assets/pic9.webp";
+import pic10 from "@/assets/pic10.webp";
+import pic11 from "@/assets/pic11.webp";
+import pic12 from "@/assets/pic12.webp";
 import logo from "@/assets/logo.png";
-
-const hero = heroAsset.url;
-const background = backgroundAsset.url;
-const story1 = story1Asset.url;
-const story2 = story2Asset.url;
 
 const PHONE_DISPLAY = "+251 964 252 025";
 const PHONE_TEL = "+251964252025";
 const WHATSAPP_URL = "https://wa.me/251964252025";
-const TELEGRAM_URL = "https://t.me/+251964252025";
+const TELEGRAM_URL = "https://t.me/dukahiking";
 const TIKTOK_URL = "https://www.tiktok.com/@dukahiking";
 const INSTAGRAM_URL = "https://www.instagram.com/duka_hiking/";
 
@@ -75,17 +70,32 @@ export const Route = createFileRoute("/")({
 });
 
 const destinations = [
-  { name: "Bale Mountains", img: baleAsset.url, blurb: "Highest point: Mount Tullu Dimtu. Mountain ranges in the Oromia Region of southeast Ethiopia.", duration: "3–4 Days" },
-  { name: "Dorze Village", img: dorzeAsset.url, blurb: "Nestled in the Guge Mountains high above Lake Chamo, the Dorze Village is a must-visit destination in southern Ethiopia.", duration: "2 Days" },
-  { name: "Abijata Shalla National Park", img: abijataAsset.url, blurb: "Explore the breathtaking attractions, abundant birdlife, and unique geographic features.", duration: "1–2 Days" },
-  { name: "Lake Langano", img: langanoAsset.url, blurb: "A popular resort destination in the Great Rift Valley of Ethiopia, located exactly 200 kilometers south of Addis Ababa.", duration: "2 Days" },
-  { name: "Wenchi Crater Lake", img: wenchiAsset.url, blurb: "A stunning volcanic caldera in Ethiopia's Oromia Region, located about 150 km west of Addis Ababa.", duration: "2 Days" },
-  { name: "Danakil Depression (Afar)", img: afarAsset.url, blurb: "One of the lowest, hottest, and most alien landscapes on Earth.", duration: "4–5 Days" },
+  { name: "Bale Mountains", img: baleImg, blurb: "Highest point: Mount Tullu Dimtu. Mountain ranges in the Oromia Region of southeast Ethiopia.", duration: "3–4 Days" },
+  { name: "Dorze Village", img: dorzeImg, blurb: "Nestled in the Guge Mountains high above Lake Chamo, the Dorze Village is a must-visit destination in southern Ethiopia.", duration: "2 Days" },
+  { name: "Abijata Shalla National Park", img: abijataImg, blurb: "Explore the breathtaking attractions, abundant birdlife, and unique geographic features.", duration: "1–2 Days" },
+  { name: "Lake Langano", img: langanoImg, blurb: "A popular resort destination in the Great Rift Valley of Ethiopia, located exactly 200 kilometers south of Addis Ababa.", duration: "2 Days" },
+  { name: "Wenchi Crater Lake", img: wenchiImg, blurb: "A stunning volcanic caldera in Ethiopia's Oromia Region, located about 150 km west of Addis Ababa.", duration: "2 Days" },
+  { name: "Danakil Depression (Afar)", img: afarImg, blurb: "One of the lowest, hottest, and most alien landscapes on Earth.", duration: "4–5 Days" },
 ];
 
 const strip = ["Bale Mountains", "Dorze", "Abijata-Shalla", "Langano", "Wenchi", "Danakil"];
 
-const galleryPics = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12].map((a) => a.url);
+const galleryPics = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12];
+
+const newsItems = [
+  {
+    title: "Upcoming Trek – Bale Mountains",
+    description: "Join us for our next adventure exploring the breathtaking Bale Mountains.",
+    date: "August 2026",
+    image: baleImg,
+  },
+  {
+    title: "New Trek Route Coming Soon",
+    description: "We're preparing exciting new hiking experiences across Ethiopia.",
+    date: "Stay tuned",
+    image: wenchiImg,
+  },
+];
 
 function LandingPage() {
   return (
@@ -174,6 +184,113 @@ function LandingPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* LATEST NEWS */}
+      <section id="news" className="relative bg-parchment py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <Reveal>
+            <div className="text-center">
+              <div className="eyebrow text-forest">Fresh off the trail</div>
+              <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-foreground">Latest News</h2>
+              <p className="mt-4 text-base text-muted-foreground">
+                What&rsquo;s happening at Duka Hiking right now.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Stickman hiker walking across mountains */}
+          <Reveal delay={80}>
+            <div className="relative mx-auto mt-10 h-28 max-w-3xl overflow-hidden sm:h-32">
+              <svg
+                viewBox="0 0 800 140"
+                preserveAspectRatio="none"
+                className="absolute inset-0 h-full w-full"
+              >
+                <path
+                  d="M0 120 L90 70 L170 120 L260 40 L350 120 L460 65 L560 120 L650 55 L730 120 L800 90"
+                  fill="none"
+                  stroke="var(--forest)"
+                  strokeOpacity="0.35"
+                  strokeWidth="3"
+                />
+                <path
+                  d="M0 122 Q120 110 240 122 T480 122 T720 122 T800 118"
+                  fill="none"
+                  stroke="var(--earth)"
+                  strokeWidth="2"
+                  strokeDasharray="6 8"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 40 40"
+                className="news-stickman absolute top-2 h-11 w-11 text-forest-deep"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="20" cy="7" r="4" fill="currentColor" stroke="none" />
+                <line x1="20" y1="11" x2="20" y2="24" />
+                <line x1="20" y1="15" x2="12" y2="12" />
+                <line x1="20" y1="15" x2="29" y2="18" />
+                <line x1="20" y1="24" x2="12" y2="34" />
+                <line x1="20" y1="24" x2="27" y2="35" />
+              </svg>
+            </div>
+          </Reveal>
+
+          <div className="mt-8 grid gap-7 sm:grid-cols-2">
+            {newsItems.map((n, i) => (
+              <Reveal key={n.title} delay={i * 120}>
+                <article className="group h-full overflow-hidden rounded-3xl bg-card shadow-card-soft ring-1 ring-border transition-transform duration-500 hover:-translate-y-1.5 hover:shadow-elegant">
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={n.image}
+                      alt={n.title}
+                      loading="lazy"
+                      width={900}
+                      height={560}
+                      className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
+                    />
+                    <div className="absolute left-4 top-4 inline-flex items-center rounded-full bg-forest-deep/85 px-3 py-1 text-xs font-semibold text-white backdrop-blur-md">
+                      {n.date}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground">{n.title}</h3>
+                    <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{n.description}</p>
+                    <a
+                      href="#contact"
+                      className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest transition-colors hover:text-forest-deep"
+                    >
+                      Read More <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                    </a>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+        <style>{`
+          @keyframes newsStickmanWalk {
+            0%   { left: 0%;   transform: translateY(0); }
+            12%  { transform: translateY(-11px); }
+            25%  { left: 20.5%; transform: translateY(0); }
+            37%  { transform: translateY(-11px); }
+            50%  { left: 41%;  transform: translateY(0); }
+            62%  { transform: translateY(-11px); }
+            75%  { left: 61%;  transform: translateY(0); }
+            87%  { transform: translateY(-11px); }
+            100% { left: 90%;  transform: translateY(0); }
+          }
+          .news-stickman {
+            left: 0%;
+            animation: newsStickmanWalk 9s ease-in-out infinite alternate;
+          }
+        `}</style>
       </section>
 
       {/* TRAIL — animated hiking trail band */}
@@ -656,7 +773,7 @@ function LandingPage() {
           <div>
             <div className="eyebrow text-gold">Quick Links</div>
             <ul className="mt-5 space-y-3 text-sm">
-              {["Home", "Destinations", "Tours", "About", "Contact"].map((l) => (
+              {["Home", "Destinations", "Tours", "News", "About", "Contact"].map((l) => (
                 <li key={l}>
                   <a href={`#${l.toLowerCase()}`} className="text-white/70 hover:text-white">
                     {l}
@@ -683,7 +800,7 @@ function LandingPage() {
                 TikTok: <a href={TIKTOK_URL} target="_blank" rel="noreferrer" className="hover:text-white">@dukahiking</a>
               </li>
               <li className="text-white/70">
-                Telegram: <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">{PHONE_DISPLAY}</a>
+                Telegram: <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">@dukahiking</a>
               </li>
               <li className="text-white/70">
                 WhatsApp: <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-white">{PHONE_DISPLAY}</a>
